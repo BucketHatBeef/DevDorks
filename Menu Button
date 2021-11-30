@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #E02828;
+  color: white;
+  padding: 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: white;
+  color: #E02828;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #E02828;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+background-color: black;
+}
+
+.show {
+display: inline;}
+
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Band List</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#nodivinity">No Divinity</a>
+    <a href="#poise&peace">Poise & Peace</a>
+    <a href="#highhopes">High Hopes</a>
+    <a href="#kylecolby">Kyle Colby</a>
+    <a href="#baltictoboardwalk">Baltic to Boardwalk</a>
+    <a href="#maul">MAUL</a>
+    <a href="#swinglow">Swing Low</a>
+    <a href="#coldfront">Cold Front</a>
+    <a href="#passtheflask">Pass the Flask</a>
+    <a href="#jessicavines">Jessica Vines</a>
+    <a href="#dre">Dre</a>
+    <a href="#roundingthird">Rounding Third</a>
+    <a href="#phobophilic">Phobophilic</a>
+    <a href="#trancemonolith">Trance Monolith</a>
+    <a href="#widow">Widow</a>
+    <a href="#rot">Rot</a>
+    <a href="#glasshouses">Glass Houses</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
